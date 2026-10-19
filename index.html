@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slipknot Lär dig om alla medlemmar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <a href="#home" class="logo">Slipknot Band</a>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger"
+               aria-label="Öppna menyn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav">
+            <a href="#home">Hem</a>
+            <a href="#members">Medlemmar</a>
+            <a href="#about">Om oss</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="main-section" id="home">
+            <div class="start-del">
+                <h1>Lär dig om Slipknots medlemmar</h1>
+                <p>
+                    Utforska information om Slipknots medlemmar
+                    och deras roll i bandet.
+                </p>
+                <a href="#members" class="primary-btn">Utforska medlemmar ↓</a>
+            </div>
+        </section>
+
+        <section class="catalog" id="members">
+            <div class="section-heading">
+                <div>
+                    <h2>Medlemskatalog</h2>
+                </div>
+                <p id="gilla-count">Gillade medlemmar: 0</p>
+            </div>
+
+            <div class="controls">
+                <input
+                    type="search"
+                    id="search"
+                    placeholder="Sök efter medlem..."
+                    aria-label="Sök efter medlem"
+                >
+
+                <select id="category" aria-label="Filtrera instrument">
+                    <option value="Alla">Alla instrument</option>
+                    <option value="Gitarr">Gitarr</option>
+                    <option value="Bass">Bass</option>
+                    <option value="Slagverk/Bakgrundssång">Slagverk</option>
+                    <option value="Sång">Sång</option>
+                </select>
+
+                <select id="sort" aria-label="Sortera filmer">
+                    <option value="newest">Nyast i Bandet</option>
+                    <option value="oldest">Äldst i Bandet</option>
+                    <option value="title">Alfabetisk ordning</option>
+                </select>
+            </div>
+
+            <div id="member-list" class="member-grid"></div>
+            <p id="empty-message" hidden>Inga medlemmar hittades.</p>
+        </section>
+    </main>
+
+    <footer id="about" class="footer">
+        <a href="#home" class="logo">Slipknot</a>
+        <p>Upptäck och lär dig om Slipknots medlemmar</p>
+        <p> Jonathan Fredriksson 2026</p>
+    </footer>
+
+</body>
+</html>
