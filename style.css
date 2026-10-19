@@ -1,0 +1,348 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090d12;
+    color: #f5f5f5;
+    font-family: "Metal Mania", cursive;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    min-height: 80px;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0e131a;
+    border-bottom: 1px solid #242b34;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff2345;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a:hover {
+    color: #ff2345;
+}
+
+#menu-toggle,
+.hamburger {
+    display: none;
+}
+
+.main-section {
+    min-height: 340px;
+    padding: 65px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, #090d12 5%, #090d12dd 45%, #090d1244),
+        url("https://www.gannett-cdn.com/media/2015/02/08/IAGroup/DesMoines/635590091815104049-D2-20100524-NEWS-5240802-4.jpg?width=1184&format=pjpg&auto=webp&quality=50") no-repeat
+        center 45% / cover;
+}
+
+.start-del {
+    max-width: 620px;
+}
+
+
+h1 {
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 18px;
+}
+
+
+.primary-btn,
+.gilla-btn {
+    display: inline-block;
+    border: none;
+    border-radius: 2px;
+    background: red;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.primary-btn:hover,
+.gilla-btn:hover {
+    background: red;
+}
+
+.catalog {
+    padding: 55px 7%;
+    scroll-margin-top: 85px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+#gilla-count {
+    color: #c4cbd4;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.controls input,
+.controls select {
+    width: 100%;
+    min-width: 0;
+    padding: 13px;
+    border-radius: 2px;
+    border: 1px solid #303844;
+    background: #141a22;
+    color: white;
+    font: inherit;
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.member-card {
+    background: #121820;
+    border: 1px solid #242b34;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.member-card:hover {
+    border-color: red;
+}
+
+.member-poster {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    background: #252d38;
+}
+
+.member-info {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.member-info h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.member-meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #c4cbd4;
+    font-size: 1rem;
+}
+
+.genre {
+    background: #253449;
+    color: #a8d0ff;
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+
+.member-info .description {
+    color: #bdc4ce;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.details-btn {
+    background: #29313c;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.details-btn:hover {
+    background: #3b4655;
+}
+
+#empty-message {
+    padding: 30px 0;
+    color: #c4cbd4;
+}
+
+.footer {
+    padding: 30px 7%;
+    text-align: center;
+    background: #0e131a;
+    border-top: 1px solid #242b34;
+    color: #c4cbd4;
+}
+
+.footer a {
+    display: inline-block;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        position: sticky;
+        padding: 12px 5%;
+    }
+
+    #menu-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        display: block;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 8px;
+    }
+
+    .hamburger span {
+        width: 27px;
+        height: 3px;
+        background: white;
+        border-radius: 3px;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #0e131a;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        border-bottom: 1px solid #303844;
+    }
+
+    #menu-toggle:checked ~ .nav {
+        display: flex;
+    }
+
+    #menu-toggle:focus-visible + .hamburger {
+        outline: 2px solid #ff536b;
+    }
+
+    .hero {
+        min-height: 330px;
+        padding: 45px 5%;
+        background-position: center;
+    }
+
+    .catalog {
+        padding: 40px 5%;
+    }
+
+    .member-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .controls {
+        grid-template-columns: 1fr;
+    }
+
+    .member-info {
+        padding: 12px;
+    }
+
+    .member-info h3 {
+        font-size: 1rem;
+    }
+
+    .card-actions button {
+        flex: 1;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 420px) {
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .member-poster {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+
+
